@@ -1,0 +1,3 @@
+project=sdw_ecb_parser
+test=rspec
+template=erb

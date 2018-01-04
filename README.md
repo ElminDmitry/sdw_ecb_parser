@@ -1,33 +1,20 @@
-# Sdw Ecb Parser
+Setup:
 
-Welcome to your new Hanami project!
+```bash
+bundle install
+bundle exec hanami db create
+bundle exec hanami db migrate
 
-## Setup
-
-How to run tests:
-
-```
-% bundle exec rake
+bundle exec hanami server
 ```
 
-How to run the development console:
+Testing:
 
+```bash
+# db setup
+HANAMI_ENV=test bundle exec hanami db create
+HANAMI_ENV=test bundle exec hanami db migrate
+
+# test run
+bundle exec rake spec
 ```
-% bundle exec hanami console
-```
-
-How to run the development server:
-
-```
-% bundle exec hanami server
-```
-
-How to prepare (create and migrate) DB for `development` and `test` environments:
-
-```
-% bundle exec hanami db prepare
-
-% HANAMI_ENV=test bundle exec hanami db prepare
-```
-
-Explore Hanami [guides](http://hanamirb.org/guides/), [API docs](http://hanamirb.org/docs/1.0.0/), or jump in [chat](http://chat.hanamirb.org) for help. Enjoy! 🌸

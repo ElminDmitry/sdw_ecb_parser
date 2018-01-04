@@ -1,0 +1,23 @@
+<h2>All amounts</h2>
+<h4>Latest period is <%= amounts.map(&:period).max %> <button name="button" type="button" id="refresh-but">Refresh DB</button> </h4>
+
+<% if amounts.any? %>
+  <div id="amounts">
+    <%= render partial: 'amounts_list' %>
+  </div>
+  <h4>Select amount by period</h4>
+  Value
+  <input type="number" id="value" value="">
+  From
+  <input type="date" id="from-date" class="date-picker">
+  To
+  <input type="date" id="to-date" class="date-picker">(optional)
+  <button name="button" type="button" id="select-but">Select</button>
+  <div id="selceted-amounts">
+
+  </div>
+<% else %>
+  <p class="placeholder">There are no amounts yet.</p>
+<% end %>
+<%= javascript 'jquery2' %>
+<%= javascript 'main' %>

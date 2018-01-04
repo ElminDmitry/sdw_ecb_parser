@@ -1,3 +1,5 @@
+require 'open-uri'
+
 module Downloader
   class AmountsCsv
     URL = 'https://sdw.ecb.europa.eu/quickview.do?SERIES_KEY=120.EXR.D.USD.EUR.SP00.A'
